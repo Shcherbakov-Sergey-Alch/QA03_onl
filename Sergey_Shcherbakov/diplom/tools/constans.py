@@ -1,0 +1,5 @@
+EMAIL = 'minsk@gmail.com'
+PASSWORD = '12345ivan'
+COUNT = '3'
+HOST_PET = 'https://petstore.swagger.io/v2/pet'
+PET_ID = '250195'
