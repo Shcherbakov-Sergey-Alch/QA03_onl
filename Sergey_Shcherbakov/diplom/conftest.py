@@ -11,7 +11,7 @@ def driver():
 
 
 @pytest.fixture(scope="session")
-def cursor():
+def connect_db():
     db = mysql.connect(
         host='localhost',
         user='root',
