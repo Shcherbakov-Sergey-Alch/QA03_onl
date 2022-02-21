@@ -42,10 +42,10 @@ def test_order(driver):
 
 
 @allure.story("Check order in database")
-def test_order_db(cursor):
+def test_order_db(connect_db):
     with allure.step('Get order data'):
-        order_id = LitercartDB.find_order_id_by_email(cursor, EMAIL)
+        order_id = LitercartDB.find_order_id_by_email(connect_db, EMAIL)
     with allure.step('Check order in database'):
         assert len(order_id) == 1, 'Order does not exist'
     with allure.step("Delete order"):
-        LitercartDB.delete_order_by_email(cursor, EMAIL)
+        LitercartDB.delete_order_by_email(connect_db, EMAIL)
